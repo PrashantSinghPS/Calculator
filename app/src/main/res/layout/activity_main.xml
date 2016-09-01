@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/MainRedBox"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#040303">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/InputBox"
+        android:layout_weight="2"
+        android:background="#040404"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical|center">
+
+        <EditText
+            android:id="@+id/edittext"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center"
+            android:textColorHighlight="#4c4646"
+            android:textColor="#ffffff"
+            android:background="#050505"
+            android:focusable="false"
+            android:inputType="textMultiLine"
+            android:focusableInTouchMode="false"
+            android:textCursorDrawable="@drawable/blackcursor"/>
+
+        <Button
+            android:id="@+id/erase"
+            android:layout_marginTop="15dp"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:text="X"
+            android:onClick="onClick"
+            android:layout_weight="0.1"
+            android:background="#565151" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/SinCosBoxMain"
+        android:layout_weight="4"
+        android:background="#040303"
+        android:layout_margin="10dp">
+        <LinearLayout
+            android:id="@+id/SinCosBox1"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <Button
+                android:onClick="onClick"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/sin"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                android:focusable="false"
+                style="@style/mystyle"
+                android:id="@+id/sin" />
+            <Button
+                android:onClick="onClick"
+                style="@style/mystyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/cos"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                android:id="@+id/cos" />
+            <Button
+                android:onClick="onClick"
+                style="@style/mystyle"
+                android:layout_width="0dp"
+                android:textAllCaps="false"
+                android:layout_height="match_parent"
+                android:text="@string/tan"
+                android:layout_weight="1"
+                android:id="@+id/tan" />
+            <Button
+                android:onClick="onClick"
+                style="@style/mystyle"
+                android:layout_width="0dp"
+                android:textAllCaps="false"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="π"
+                android:id="@+id/pie" />
+            <Button
+                android:onClick="onClick"
+                style="@style/mystyle"
+                android:layout_width="0dp"
+                android:textAllCaps="false"
+                android:layout_height="match_parent"
+                android:text="!"
+                android:layout_weight="1"
+                android:id="@+id/factorial" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:orientation="horizontal"
+            android:id="@+id/SinCosBox2"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <Button
+                android:onClick="onClick"
+                style="@style/mystyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/ln"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:id="@+id/ln" />
+            <Button
+                android:onClick="onClick"
+                style="@style/mystyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/log"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                android:id="@+id/log" />
+            <Button
+                android:onClick="onClick"
+                style="@style/mystyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/e"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                android:id="@+id/e" />
+            <Button
+                android:onClick="onClick"
+                style="@style/mystyle"
+                android:layout_width="0dp"
+                android:textAllCaps="false"
+                android:layout_height="match_parent"
+                android:text="^"
+                android:layout_weight="1"
+                android:id="@+id/power" />
+            <Button
+                android:onClick="onClick"
+                style="@style/mystyle"
+                android:layout_width="0dp"
+                android:textAllCaps="false"
+                android:layout_height="match_parent"
+                android:text="√"
+                android:layout_weight="1"
+                android:id="@+id/sqrt" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/NumberInputBoxMain"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:id="@+id/NumberInputBox1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5">
+            <Button
+                android:onClick="onClick"
+                style="@style/mystyle2"
+                android:layout_width="0dp"
+                android:textAllCaps="false"
+                android:layout_height="match_parent"
+                android:text="7"
+                android:layout_weight="1"
+                android:id="@+id/seven" />
+            <Button
+                android:onClick="onClick"
+                style="@style/mystyle2"
+                android:layout_width="0dp"
+                android:textAllCaps="false"
+                android:layout_height="match_parent"
+                android:text="8"
+                android:layout_weight="1"
+                android:id="@+id/eight" />
+            <Button
+                android:onClick="onClick"
+                style="@style/mystyle2"
+                android:layout_width="0dp"
+                android:textAllCaps="false"
+                android:layout_height="match_parent"
+                android:text="9"
+                android:layout_weight="1"
+                android:id="@+id/nine" />
+            <Button
+                android:onClick="onClick"
+                style="@style/mystyle2"
+                android:layout_width="0dp"
+                android:textAllCaps="false"
+                android:layout_height="match_parent"
+                android:text="÷"
+                android:layout_weight="1"
+                android:id="@+id/divide" />
+            <Button
+                android:onClick="onClick"
+                style="@style/mystyle2"
+                android:layout_width="0dp"
+                android:textAllCaps="false"
+                android:layout_height="match_parent"
+                android:text="("
+                android:layout_weight="1"
+                android:id="@+id/openbracket" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/NumberInputBox2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:layout_gravity="center_horizontal">
+            <Button
+                android:onClick="onClick"
+                style="@style/mystyle2"
+                android:layout_width="0dp"
+                android:textAllCaps="false"
+                android:layout_height="match_parent"
+                android:text="4"
+                android:layout_weight="1"
+                android:id="@+id/four" />
+            <Button
+                android:onClick="onClick"
+                style="@style/mystyle2"
+                android:layout_width="0dp"
+                android:textAllCaps="false"
+                android:layout_height="match_parent"
+                android:text="5"
+                android:layout_weight="1"
+                android:id="@+id/five" />
+            <Button
+                android:onClick="onClick"
+                style="@style/mystyle2"
+                android:layout_width="0dp"
+                android:textAllCaps="false"
+                android:layout_height="match_parent"
+                android:text="6"
+                android:layout_weight="1"
+                android:id="@+id/six" />
+            <Button
+                android:onClick="onClick"
+                style="@style/mystyle2"
+                android:layout_width="0dp"
+                android:textAllCaps="false"
+                android:layout_height="match_parent"
+                android:text="x"
+                android:layout_weight="1"
+                android:id="@+id/multiply" />
+            <Button
+                android:onClick="onClick"
+                style="@style/mystyle2"
+                android:layout_width="0dp"
+                android:textAllCaps="false"
+                android:layout_height="match_parent"
+                android:text=")"
+                android:layout_weight="1"
+                android:id="@+id/closebracket" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/NumberInputBox3"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="5">
+
+            <LinearLayout
+                android:id="@+id/NumberInputBox3"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:measureWithLargestChild="false"
+                android:layout_weight="10">
+
+                <LinearLayout
+                    android:background="#FFFAF9F9"
+                    android:id="@+id/NumberInputBox311"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="2.5">
+                <Button
+                    android:onClick="onClick"
+                    style="@style/mystyle2"
+                    android:layout_width="0dp"
+                    android:textAllCaps="false"
+                    android:layout_height="match_parent"
+                    android:text="1"
+                    android:layout_weight="1"
+                    android:id="@+id/one" />
+                <Button
+                    android:onClick="onClick"
+                    style="@style/mystyle2"
+                    android:layout_width="0dp"
+                    android:textAllCaps="false"
+                    android:layout_height="match_parent"
+                    android:text="2"
+                    android:layout_weight="1"
+                    android:id="@+id/two" />
+                <Button
+                    android:onClick="onClick"
+                    style="@style/mystyle2"
+                    android:layout_width="0dp"
+                    android:textAllCaps="false"
+                    android:layout_height="match_parent"
+                    android:text="3"
+                    android:layout_weight="1"
+                    android:id="@+id/three" />
+                <Button
+                    android:onClick="onClick"
+                    style="@style/mystyle2"
+                    android:layout_width="0dp"
+                    android:textAllCaps="false"
+                    android:layout_height="match_parent"
+                    android:text="-"
+                    android:layout_weight="1"
+                    android:id="@+id/minus" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/NumberInputBox312"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_horizontal"
+                    android:layout_weight="2.5">
+
+                        <Button
+                            android:onClick="onClick"
+                            style="@style/mystyle2"
+                            android:layout_width="0dp"
+                            android:textAllCaps="false"
+                            android:layout_height="match_parent"
+                            android:text="0"
+                            android:layout_weight="2"
+                            android:id="@+id/zero" />
+                        <Button
+                            android:onClick="onClick"
+                            style="@style/mystyle2"
+                            android:layout_width="0dp"
+                            android:textAllCaps="false"
+                            android:layout_height="match_parent"
+                            android:text="."
+                            android:layout_weight="1"
+                            android:id="@+id/point" />
+                        <Button
+                            android:onClick="onClick"
+                            style="@style/mystyle2"
+                            android:layout_width="0dp"
+                            android:textAllCaps="false"
+                            android:layout_height="match_parent"
+                            android:text="+"
+                            android:layout_weight="1"
+                            android:id="@+id/plus" />
+                    </LinearLayout>
+
+            </LinearLayout>
+            <Button
+                android:onClick="onClick"
+                style="@style/mystyle2"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:textAllCaps="false"
+                android:layout_height="match_parent"
+                android:text="="
+                android:id="@+id/equal" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
